@@ -1,0 +1,40 @@
+<div class="div__contain__form" (submit)="enviarFormulario()">
+  <form class="form__group">
+    <h2>Me envie uma solicitação/sugestão de música :)</h2>
+    <div class="mb-3">
+      <label for="nomeDaMusica" class="form-label">Nome da Música</label>
+      <input type="text" class="form-control" id="nomeDaMusica" aria-describedby="emailHelp" required>
+      <div id="emailHelp" class="form-text">Por favor preencha esse campo</div>
+    </div>
+    <div class="mb-3">
+      <label for="Artista" class="form-label">Artista</label>
+      <input type="text" class="form-control" id="Artista">
+    </div>
+    <div class="mb-3">
+      <label for="Artista" class="form-label">Instrumento</label>
+      <select type="text" class="form-control" id="Artista">
+          <option value="">Violão</option>
+          <option value="">Ukulele</option>
+          <option value="">Baixo</option>
+          <option value="">Viola</option>
+          <option value="">Violino</option>
+      </select>
+    </div>
+    <div *ngIf="!naoQueroMeIdentificar">
+      <div class="mb-3">
+        <label for="nomeDaMusica" class="form-label">Seu Nome</label>
+        <input type="text" class="form-control" id="nomeDaMusica" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Por favor preencha esse campo</div>
+      </div>
+      <div class="mb-3">
+        <label for="Artista" class="form-label">Seu perfil no Instagram</label>
+        <input type="text" class="form-control" id="Artista">
+      </div>
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" (change)="naoQueroIdentificar()">
+        <label class="form-check-label" for="exampleCheck1">Não quero me identificar</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>

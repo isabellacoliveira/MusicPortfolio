@@ -1,0 +1,46 @@
+.div__bemvindo{
+  width: 100%;
+  background-image: url("https://64.media.tumblr.com/tumblr_lok755Qofg1qkzotco1_500.gif");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: auto;
+  height: 600px;
+  font-family: 'Raleway';
+  font-style: normal;
+  color: #fff;
+  font-size: 60px;
+  padding-top: 500px;
+  padding-left: 20px;
+}
+
+.btn-primary{
+  background-color: #000;
+  border: none;
+  width: 200px;
+}
+
+.btn-primary:hover{
+  background-color: #fff;
+  border: none;
+  width: 200px;
+  color: #000;
+}
+
+.pedido__div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.div__contain__form{
+  margin-left: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-right: 50px;
+  box-shadow: 0px 5px 5px -5px black;
+}
+
+
+

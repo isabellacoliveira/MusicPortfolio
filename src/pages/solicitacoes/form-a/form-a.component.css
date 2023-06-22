@@ -1,0 +1,27 @@
+.btn-primary{
+  background-color: #000;
+  border: none;
+  width: 200px;
+}
+
+.btn-primary:hover{
+  background-color: #fff;
+  border: none;
+  width: 200px;
+  color: #000;
+}
+
+.form__div{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  font-family: 'Raleway';
+  font-style: normal;
+}
+
+.form__group{
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  background-color: #A0522D;
+  color: #fff;
+}
