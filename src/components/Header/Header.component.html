@@ -1,8 +1,31 @@
 <nav class="nav__div">
+  <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+    Sobre
+  </a>
   <a href="https://www.instagram.com/isaxx_ah/" target="_blank">
     <img src="https://i.pinimg.com/originals/43/88/40/438840ca10593324de82e90e29218f2d.jpg" alt="">
   </a>
 </nav>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Sobre a aplicação</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      Esse portifólio foi desenvolvido utilizando a linguagem de programação Angular. Todos os direitos estão reservados. ©️
+      <br>
+      <hr>
+
+      <a href="https://www.instagram.com/isaxx_ah/">
+        Me siga no Instagram
+        <img class="log" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="">
+      </a>
+    </div>
+  </div>
+</div>
 <main>
   <router-outlet></router-outlet>
 </main>
+

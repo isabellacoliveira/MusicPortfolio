@@ -14,6 +14,10 @@ export class SolicitacoesComponent implements OnInit {
 
   solicitarMusica(){
     this.formularioAberto = !this.formularioAberto;
-    this.router.navigate(['/solicitacoes/a']);
+    if(this.formularioAberto){
+      this.router.navigate(['/solicitacoes/a']);
+    } else {
+      this.router.navigate(['/solicitacoes']);
+    }
   }
 }

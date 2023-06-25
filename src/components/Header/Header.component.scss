@@ -4,7 +4,7 @@
   height: 70px;
   padding-top: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 10px;
 
   img{
@@ -17,4 +17,27 @@
       cursor: pointer;
   }
   }
+  a{
+    margin-right: 10px;
+  }
+}
+
+.actions__div{
+  width: 100%;
+  li{
+    width: 25%;
+  }
+}
+
+.log{
+  width: 20px;
+}
+
+.btn-primary{
+  margin-bottom: 18px;
+  background-color: #000;
+  border: none;
+  padding-top: 7px;
+  margin-left: 20px;
+  margin-top: 3px;
 }

@@ -1,3 +1,5 @@
+import { ApresentacoesComponent } from './../pages/apresentacoes/apresentacoes.component';
+import { TracklistComponent } from './../pages/tracklist/tracklist.component';
 import { BotaoVoltarComponent } from './../components/botaoVoltar/botaoVoltar.component';
 import { FormBComponent } from './../pages/solicitacoes/form-b/form-b.component';
 import { FormAComponent } from './../pages/solicitacoes/form-a/form-a.component';
@@ -19,7 +21,9 @@ import { AppComponent } from './app.component';
     HeaderComponent,
     FormAComponent,
     FormBComponent,
-    BotaoVoltarComponent
+    BotaoVoltarComponent,
+    TracklistComponent,
+    ApresentacoesComponent
   ],
   imports: [
     BrowserModule,

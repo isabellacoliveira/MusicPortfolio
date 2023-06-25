@@ -1,3 +1,5 @@
+import { ApresentacoesComponent } from './../pages/apresentacoes/apresentacoes.component';
+import { TracklistComponent } from './../pages/tracklist/tracklist.component';
 import { FormBComponent } from './../pages/solicitacoes/form-b/form-b.component';
 import { FormAComponent } from './../pages/solicitacoes/form-a/form-a.component';
 import { SolicitacoesComponent } from './../pages/solicitacoes/solicitacoes.component';
@@ -32,11 +34,11 @@ const routes: Routes = [
       },
       {
         path: 'tracklist',
-        component: HistoriaComponent
+        component: TracklistComponent
       },
       {
         path: 'apresentacoes',
-        component: HistoriaComponent
+        component: ApresentacoesComponent
       }
     ]
   }
