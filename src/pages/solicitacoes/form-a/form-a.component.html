@@ -1,19 +1,18 @@
-<div class="div__contain__form" >
-  <form class="form__group" (submit)="enviarFormulario($event)">
+ <div class="div__contain__form">
+  <form class="form__group" [formGroup]="formGroup" (submit)="enviarFormulario($event)">
     <h2>Me envie uma solicitação/sugestão de música :)</h2>
     <div class="mb-3">
       <label for="nomeDaMusica" class="form-label">Nome da Música</label>
-      <input type="text" class="form-control" id="nomeDaMusica" aria-describedby="emailHelp" required>
-      <!-- <div id="emailHelp" class="form-text">Por favor preencha esse campo</div> -->
+      <input type="text" class="form-control" id="nomeDaMusica" formControlName="nomeDaMusica" required>
       <div *ngIf="formGroup.get('nomeDaMusica')?.invalid && formGroup.get('nomeDaMusica')?.touched" class="form-text">Por favor preencha esse campo</div>
     </div>
     <div class="mb-3">
-      <label for="Artista" class="form-label">Artista</label>
-      <input type="text" class="form-control" id="Artista" required>
+      <label for="artista" class="form-label">Artista</label>
+      <input type="text" class="form-control" id="artista" formControlName="artista" required>
     </div>
     <div class="mb-3">
-      <label for="Artista" class="form-label">Instrumento</label>
-      <select class="form-control" id="Artista"  name="instrumento" required>
+      <label for="instrumento" class="form-label">Instrumento</label>
+      <select class="form-control" id="instrumento" formControlName="instrumento" required>
         <option value="" disabled selected>Selecione um instrumento</option>
         <option [value]="instrumento.instrumento" *ngFor="let instrumento of instrumentos">{{ instrumento.instrumento }}</option>
       </select>
@@ -24,14 +23,13 @@
 
     <div *ngIf="!naoQueroMeIdentificar">
       <div class="mb-3">
-        <label for="nomeDaMusica" class="form-label">Seu Nome</label>
-        <input type="text" class="form-control" id="nomeDaMusica" aria-describedby="emailHelp">
-        <!-- <div id="emailHelp" class="form-text">Por favor preencha esse campo</div> -->
-        <div *ngIf="formGroup.get('nomeDaMusica')?.invalid && formGroup.get('nomeDaMusica')?.touched" class="form-text">Por favor preencha esse campo</div>
+        <label for="nome" class="form-label">Seu Nome</label>
+        <input type="text" class="form-control" id="nome" formControlName="nome">
+        <div *ngIf="formGroup.get('nome')?.invalid && formGroup.get('nome')?.touched" class="form-text">Por favor preencha esse campo</div>
       </div>
       <div class="mb-3">
-        <label for="Artista" class="form-label">Seu perfil no Instagram</label>
-        <input type="text" class="form-control" id="Artista">
+        <label for="perfilInstagram" class="form-label">Seu perfil no Instagram</label>
+        <input type="text" class="form-control" id="perfilInstagram" formControlName="perfilInstagram">
       </div>
     </div>
     <div class="mb-3 form-check">

@@ -1,3 +1,4 @@
+import { NgxSpinnerService } from 'ngx-spinner';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'music-nation';
+
+  constructor(private spinner: NgxSpinnerService){}
+
+  ngOnInit(){
+    this.spinner.show()
+    .then(() => {
+      setTimeout(() => {
+        this.spinner.hide()
+      }, 2000)
+    })
+  }
 }
