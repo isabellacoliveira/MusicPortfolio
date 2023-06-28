@@ -4,11 +4,13 @@ import { Router } from '@angular/router';
 import { IInstrumento } from 'src/types/IInstrumento';
 import emailjs from 'emailjs-com';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
+import { DarkModeService } from 'src/services/DarkMode.service';
 
 @Component({
   selector: 'app-form-a',
   templateUrl: './form-a.component.html',
-  styleUrls: ['./form-a.component.css']
+  styleUrls: ['./form-a.component.scss']
 })
 export class FormAComponent  {
   naoQueroMeIdentificar: boolean = false;
@@ -21,8 +23,10 @@ export class FormAComponent  {
     { instrumento: 'Ukulele' }
   ];
   enviandoFormulario: boolean = false;
+  stateDarkMode: boolean = false;
 
-  constructor(private router: Router, private formBuilder: FormBuilder, private spinner: NgxSpinnerService) {
+  constructor(private router: Router, private formBuilder: FormBuilder, private spinner: NgxSpinnerService, private darkModeService: DarkModeService, private toastr: ToastrService) {
+
     this.formGroup = this.formBuilder.group({
       nomeDaMusica: ['', Validators.required],
       artista: ['', Validators.required],
@@ -32,8 +36,15 @@ export class FormAComponent  {
     });
   }
 
+  ngOnInit(){
+    this.darkModeService.getIsDarkModeActive().subscribe((isActive: boolean) => {
+      this.stateDarkMode = isActive;
+    });
+  }
+
   naoQueroIdentificar(){
     this.naoQueroMeIdentificar = !this.naoQueroMeIdentificar;
+
   }
 
   enviarFormulario(event: Event) {
@@ -54,7 +65,7 @@ export class FormAComponent  {
             ${this.naoQueroMeIdentificar ?
             `Meu nome é: ${this.formGroup.get('nome')?.value}.
             Meu perfil do Instagram: ${this.formGroup.get('perfilInstagram')?.value}` : ""}`};
-            
+
             setTimeout(() => {
               // Ocultar spinner
               this.spinner.hide();
@@ -62,14 +73,14 @@ export class FormAComponent  {
 
   emailjs.send(serviceID, templateID, templateParams, userID)
     .then((response) => {
-      this.spinner.hide(); // Esconde o spinner
-      console.log('E-mail enviado com sucesso!', response);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      this.toastr.success('E-mail enviado com sucesso!', 'Sucesso!');
+      this.spinner.hide();
       this.router.navigate(['/solicitacoes/b']);
     })
     .catch((error) => {
-      this.spinner.hide(); // Esconde o spinner
-      alert('deu errado')
-      console.error('Erro ao enviar o e-mail:', error);
+      this.spinner.hide();
+      this.toastr.error('Erro ao enviar o e-mail:', 'Falha', error);
     });
   }
 }

@@ -1,4 +1,4 @@
-<section>
+<section [ngClass]="stateDarkMode ? 'section__class' : 'section__class-dark'">
   <div>
     <div class="div__bemvindo">
       Seja bem-vindo(a) ao meu portifolio musical!
@@ -7,15 +7,13 @@
       <h2>Aqui você pode acompanhar um pouco da minha trajetória no mundo da música! <br>
         Me envie um pedido! :) <br>
       </h2>
-      <button class="btn btn-primary" (click)="solicitarMusica()">
+      <button class="btn btn-primary" [ngClass]="stateDarkMode ? 'btn-primary' : 'btn-primary-dark'" (click)="solicitarMusica()">
         {{ !formularioAberto ? 'Solicitar Música ' : 'Ocultar Formulário'}}
       </button>
     </div>
     <div class="div__contain__form">
       <router-outlet></router-outlet>
     </div>
-
-
   </div>
 </section>
 

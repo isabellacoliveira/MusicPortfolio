@@ -1,3 +1,4 @@
+import { DarkModeService } from './../../services/DarkMode.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SolicitacoesComponent implements OnInit {
   formularioAberto: boolean = false;
-  constructor(private router: Router) { }
+  stateDarkMode: boolean = false;
+
+  constructor(private router: Router, private darkModeService: DarkModeService) { }
   ngOnInit() {
+    this.darkModeService.getIsDarkModeActive().subscribe((isActive: boolean) => {
+      this.stateDarkMode = isActive;
+    });
   }
 
   solicitarMusica(){

@@ -1,3 +1,4 @@
+import { DarkModeService } from 'src/services/DarkMode.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./Footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
+  stateDarkMode: boolean = false;
+  constructor(private darkModeService: DarkModeService) { }
 
   ngOnInit() {
+    this.darkModeService.getIsDarkModeActive().subscribe((isActive: boolean) => {
+      this.stateDarkMode = isActive;
+    });
   }
 
 }

@@ -1,13 +1,18 @@
-<nav class="nav__div">
-  <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+<nav [ngClass]="stateDarkMode ? 'nav__div' : 'nav__div-dark'">
+  <a [ngClass]="stateDarkMode ? 'btn btn-primary' : 'btn btn-primary-dark'" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
     Sobre
   </a>
   <a href="https://www.instagram.com/isaxx_ah/" target="_blank">
     <img src="https://i.pinimg.com/originals/43/88/40/438840ca10593324de82e90e29218f2d.jpg" alt="">
   </a>
+  <div>
+    <app-themeSwitcher (darkModeActiveChange)="onDarkModeActiveChange($event)"></app-themeSwitcher>
+  </div>
 </nav>
 
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+<div class="offcanvas offcanvas-start"
+[ngClass]="stateDarkMode ? 'offcanvas' : 'offcanvas-dark'"
+tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasExampleLabel">Sobre a aplicação</h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -25,7 +30,6 @@
     </div>
   </div>
 </div>
-<app-themeSwitcher></app-themeSwitcher>
 <main>
   <router-outlet></router-outlet>
 </main>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-themeSwitcher',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./themeSwitcher.component.css']
 })
 export class ThemeSwitcherComponent implements OnInit {
+  @Output() darkModeActiveChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   isDarkModeActive = false;
   constructor() { }
 
@@ -13,7 +14,7 @@ export class ThemeSwitcherComponent implements OnInit {
   }
 
   onChange(newValue: boolean): void {
-    console.log(newValue);
+    this.darkModeActiveChange.emit(newValue);
   }
 
 }

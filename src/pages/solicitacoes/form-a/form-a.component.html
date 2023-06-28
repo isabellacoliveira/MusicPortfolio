@@ -1,42 +1,43 @@
- <div class="div__contain__form">
-  <form class="form__group" [formGroup]="formGroup" (submit)="enviarFormulario($event)">
+<!-- TODO mudar as cores dos inputs -->
+<div class="div__contain__form">
+  <form [ngClass]="stateDarkMode ? 'form__group' : 'form__group-dark'" [formGroup]="formGroup" (submit)="enviarFormulario($event)">
     <h2>Me envie uma solicitação/sugestão de música :)</h2>
     <div class="mb-3">
       <label for="nomeDaMusica" class="form-label">Nome da Música</label>
-      <input type="text" class="form-control" id="nomeDaMusica" formControlName="nomeDaMusica" required>
-      <div *ngIf="formGroup.get('nomeDaMusica')?.invalid && formGroup.get('nomeDaMusica')?.touched" class="form-text">Por favor preencha esse campo</div>
+      <input type="text" class="form-control" id="nomeDaMusica" formControlName="nomeDaMusica" maxlength="40" minlength="3" required placeholder="Digite o nome da música">
+      <div *ngIf="formGroup.get('nomeDaMusica')?.invalid && formGroup.get('nomeDaMusica')?.touched" class="text-danger">Por favor preencha esse campo</div>
     </div>
     <div class="mb-3">
       <label for="artista" class="form-label">Artista</label>
-      <input type="text" class="form-control" id="artista" formControlName="artista" required>
+      <input type="text" class="form-control" id="artista" formControlName="artista" maxlength="40" minlength="3"required placeholder="Digite o nome do artista">
+      <div *ngIf="formGroup.get('artista')?.invalid && formGroup.get('artista')?.touched" class="text-danger">Por favor preencha esse campo</div>
     </div>
     <div class="mb-3">
       <label for="instrumento" class="form-label">Instrumento</label>
       <select class="form-control" id="instrumento" formControlName="instrumento" required>
-        <option value="" disabled selected>Selecione um instrumento</option>
+        <option value="" disabled selected><p>Selecione um instrumento</p></option>
         <option [value]="instrumento.instrumento" *ngFor="let instrumento of instrumentos">{{ instrumento.instrumento }}</option>
       </select>
       <div *ngIf="formGroup.get('instrumento')?.invalid && formGroup.get('instrumento')?.touched" class="text-danger">
-        Selecione uma opção.
+        Por favor selecione uma opção.
       </div>
     </div>
 
     <div *ngIf="!naoQueroMeIdentificar">
       <div class="mb-3">
         <label for="nome" class="form-label">Seu Nome</label>
-        <input type="text" class="form-control" id="nome" formControlName="nome">
-        <div *ngIf="formGroup.get('nome')?.invalid && formGroup.get('nome')?.touched" class="form-text">Por favor preencha esse campo</div>
+        <input type="text" class="form-control" id="nome" formControlName="nome" placeholder="Digite seu nome" maxlength="40" minlength="3">
       </div>
       <div class="mb-3">
         <label for="perfilInstagram" class="form-label">Seu perfil no Instagram</label>
-        <input type="text" class="form-control" id="perfilInstagram" formControlName="perfilInstagram">
+        <input type="text" class="form-control" id="perfilInstagram" formControlName="perfilInstagram"  maxlength="40" minlength="3" placeholder="Digite seu perfil do Instagram">
       </div>
     </div>
     <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1" (change)="naoQueroIdentificar()">
         <label class="form-check-label" for="exampleCheck1">Não quero me identificar</label>
     </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+    <button type="submit" class="btn btn-primary" [disabled]="formGroup.invalid">Enviar</button>
   </form>
 </div>
 

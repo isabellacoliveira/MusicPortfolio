@@ -1,9 +1,9 @@
-<div class="div__encaminha">
+<div  [ngClass]="stateDarkMode ? 'div__encaminha' : 'div__encaminha-dark'">
   <button routerLink="/solicitacoes" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Solicitações">
-    <img class="icon__button" src="../../assets/calendario.png" alt="">
+    <img class="icon__button" src="../../assets/diagrama.png" alt="">
   </button>
   <button routerLink="/historia" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="História">
-    <img class="icon__button" src="https://cdn-icons-png.flaticon.com/512/5234/5234526.png" alt="">
+    <img class="icon__button" src="../../assets/planejador.png" alt="">
   </button>
 </div>
 

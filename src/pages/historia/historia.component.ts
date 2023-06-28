@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DarkModeService } from 'src/services/DarkMode.service';
 
 @Component({
   selector: 'app-historia',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./historia.component.scss']
 })
 export class HistoriaComponent implements OnInit {
+  stateDarkMode: boolean = false;
 
-  constructor() { }
+  constructor(private darkModeService: DarkModeService) { }
 
-  ngOnInit() {
+  ngOnInit(){
+    this.darkModeService.getIsDarkModeActive().subscribe((isActive: boolean) => {
+      this.stateDarkMode = isActive;
+    });
   }
 
 }

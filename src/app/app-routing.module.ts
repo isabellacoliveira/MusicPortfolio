@@ -10,6 +10,11 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'solicitacoes',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
     component: HeaderComponent,
     children: [
       {
