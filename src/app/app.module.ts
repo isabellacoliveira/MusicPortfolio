@@ -1,5 +1,4 @@
-import { ApresentacoesComponent } from './../pages/apresentacoes/apresentacoes.component';
-import { TracklistComponent } from './../pages/tracklist/tracklist.component';
+import { ThemeSwitcherComponent } from './../components/themeSwitcher/themeSwitcher.component';
 import { BotaoVoltarComponent } from './../components/botaoVoltar/botaoVoltar.component';
 import { FormBComponent } from './../pages/solicitacoes/form-b/form-b.component';
 import { FormAComponent } from './../pages/solicitacoes/form-a/form-a.component';
@@ -11,9 +10,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -25,15 +27,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormAComponent,
     FormBComponent,
     BotaoVoltarComponent,
-    TracklistComponent,
-    ApresentacoesComponent
+    ThemeSwitcherComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     NgxSpinnerModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    MatSlideToggleModule,
+    MatIconModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent],

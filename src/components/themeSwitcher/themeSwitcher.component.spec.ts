@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ApresentacoesComponent } from './apresentacoes.component';
+import { ThemeSwitcherComponent } from './themeSwitcher.component';
 
-describe('ApresentacoesComponent', () => {
-  let component: ApresentacoesComponent;
-  let fixture: ComponentFixture<ApresentacoesComponent>;
+describe('ThemeSwitcherComponent', () => {
+  let component: ThemeSwitcherComponent;
+  let fixture: ComponentFixture<ThemeSwitcherComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ApresentacoesComponent ]
+      declarations: [ ThemeSwitcherComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ApresentacoesComponent);
+    fixture = TestBed.createComponent(ThemeSwitcherComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

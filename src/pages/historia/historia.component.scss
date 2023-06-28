@@ -1,0 +1,68 @@
+.div__historia{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  height: 600px;
+}
+
+.card{
+  &:hover {
+    transform: translateY(-4px);
+    cursor: pointer;
+}
+}
+
+.card-body {
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin: 0 auto;
+
+  img{
+    width: 100px;
+  }
+}
+
+.parte_dois{
+  margin-bottom: 50px;
+}
+
+.cabecalho{
+  background-image: url("https://i.gifer.com/40RI.gif");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 500px;
+  margin-bottom: 10px;
+  padding-top: 400px;
+  padding-left: 10px;
+  h3{
+    font-size: 60px;
+  }
+}
+
+.accordion-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img{
+    margin-top: 30px;
+    width: 500px;
+  }
+  video{
+    height: 500px;
+  }
+}
+
+
+

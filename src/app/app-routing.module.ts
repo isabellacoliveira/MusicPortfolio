@@ -1,5 +1,3 @@
-import { ApresentacoesComponent } from './../pages/apresentacoes/apresentacoes.component';
-import { TracklistComponent } from './../pages/tracklist/tracklist.component';
 import { FormBComponent } from './../pages/solicitacoes/form-b/form-b.component';
 import { FormAComponent } from './../pages/solicitacoes/form-a/form-a.component';
 import { SolicitacoesComponent } from './../pages/solicitacoes/solicitacoes.component';
@@ -31,14 +29,6 @@ const routes: Routes = [
       {
         path: 'historia',
         component: HistoriaComponent
-      },
-      {
-        path: 'tracklist',
-        component: TracklistComponent
-      },
-      {
-        path: 'apresentacoes',
-        component: ApresentacoesComponent
       }
     ]
   }
