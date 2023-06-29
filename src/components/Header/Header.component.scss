@@ -33,6 +33,14 @@
   }
 }
 
+.btn-close {
+  background-color: var(--azul-bebe)!important;
+}
+
+.btn-close-dark {
+  background-color: var(--cinza-suave)!important;
+}
+
 .log{
   width: 20px;
 }
@@ -44,7 +52,6 @@
   padding-top: 5px;
   margin-left: 20px;
   height: 35px;
-  margin-top: 20px;
 }
 
 .offcanvas{
@@ -115,6 +122,9 @@
       margin-bottom: 10px;
     }
   }
+  .btn-primary{
+    margin-top: 20px;
+  }
 }
 
 @media (min-width: 900px) {
@@ -125,5 +135,8 @@
     padding-top: 10px;
     display: flex;
     justify-content: space-between;
+  }
+  .btn-primary{
+    margin-top: 6px;
   }
 }

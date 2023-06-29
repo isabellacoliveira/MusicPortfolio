@@ -12,6 +12,8 @@
 
 .section__class{
   background-color: var(--azul-forte);
+  height: 800px;
+  overflow: auto;
 }
 
 .btn-primary{
@@ -53,6 +55,8 @@ h5{
 // dark
 .section__class-dark{
   background-color: var(--preto-forte);
+  height: 800px;
+  overflow: auto;
 }
 
 .btn-primary-dark{

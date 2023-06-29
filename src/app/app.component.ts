@@ -1,6 +1,7 @@
 import { DarkModeService } from 'src/services/DarkMode.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent {
   title = 'music-nation';
   stateDarkMode: boolean = false;
 
-  constructor(private spinner: NgxSpinnerService,private darkModeService: DarkModeService){}
+  constructor(private spinner: NgxSpinnerService,private darkModeService: DarkModeService, private router: Router){}
 
   ngOnInit(){
     this.darkModeService.getIsDarkModeActive().subscribe((isActive: boolean) => {
@@ -23,5 +24,8 @@ export class AppComponent {
         this.spinner.hide()
       }, 1000)
     })
+  }
+  isRouteEmpty(): boolean {
+    return this.router.url !== '/';
   }
 }
