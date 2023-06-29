@@ -5,7 +5,7 @@ import { IInstrumento } from 'src/types/IInstrumento';
 import emailjs from 'emailjs-com';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
-import { DarkModeService } from 'src/services/DarkMode.service';
+import { DarkModeService } from 'src/services/DarkMode/DarkMode.service';
 
 @Component({
   selector: 'app-form-a',

@@ -1,3 +1,4 @@
+import { NotFoundComponent } from 'src/pages/NotFound/NotFound.component';
 import { ThemeSwitcherComponent } from './../components/themeSwitcher/themeSwitcher.component';
 import { BotaoVoltarComponent } from './../components/botaoVoltar/botaoVoltar.component';
 import { FormBComponent } from './../pages/solicitacoes/form-b/form-b.component';
@@ -17,6 +18,12 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { ToastrModule } from 'ngx-toastr';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   declarations: [
@@ -28,7 +35,8 @@ import { ToastrModule } from 'ngx-toastr';
     FormAComponent,
     FormBComponent,
     BotaoVoltarComponent,
-    ThemeSwitcherComponent
+    ThemeSwitcherComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +48,7 @@ import { ToastrModule } from 'ngx-toastr';
     MatSlideToggleModule,
     MatIconModule,
     MatExpansionModule,
+    LottieModule.forRoot({ player: playerFactory }),
     ToastrModule.forRoot()
   ],
   providers: [],

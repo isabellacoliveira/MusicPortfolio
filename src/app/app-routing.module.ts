@@ -6,6 +6,7 @@ import { HeaderComponent } from './../components/Header/Header.component';
 import { HistoriaComponent } from '../pages/historia/historia.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from 'src/pages/NotFound/NotFound.component';
 
 const routes: Routes = [
   {
@@ -34,8 +35,12 @@ const routes: Routes = [
       {
         path: 'historia',
         component: HistoriaComponent
-      }
+      },
     ]
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 

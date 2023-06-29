@@ -1,4 +1,4 @@
-import { DarkModeService } from 'src/services/DarkMode.service';
+import { DarkModeService } from 'src/services/DarkMode/DarkMode.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';

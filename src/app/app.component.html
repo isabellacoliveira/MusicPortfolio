@@ -1,7 +1,7 @@
 <section>
   <main class="main__app">
       <router-outlet></router-outlet>
-    <app-Footer></app-Footer>
+    <app-Footer *ngIf="isRouteEmpty()"></app-Footer>
   </main>
 </section>
 <ngx-spinner

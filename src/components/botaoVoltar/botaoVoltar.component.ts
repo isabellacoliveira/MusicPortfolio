@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DarkModeService } from 'src/services/DarkMode.service';
+import { DarkModeService } from 'src/services/DarkMode/DarkMode.service';
 
 @Component({
   selector: 'app-botaoVoltar',

@@ -1,4 +1,4 @@
-import { DarkModeService } from './../../services/DarkMode.service';
+import { DarkModeService } from 'src/services/DarkMode/DarkMode.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
