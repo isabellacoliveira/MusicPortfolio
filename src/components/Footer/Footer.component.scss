@@ -1,33 +1,50 @@
+// global
 .div__encaminha{
   width: 100%;
 
   button{
     width: 50%;
-    background-color: #1b2e5e;
+    background-color: var(--fundo-azul);
     border: none;
-    height: 65px;
-
   }
 }
 
+.icon__button{
+  &:hover {
+    transform: translateY(-4px);
+    cursor: pointer;
+}
+}
+
+// dark
 .div__encaminha-dark{
   width: 100%;
 
   button{
     width: 50%;
-    background-color: #000;
+    background-color: var(--preto-suave);
     border: none;
-    height: 65px;
-
   }
 }
 
-.icon__button{
-  width: 50px;
-  height: 50px;
-
-  &:hover {
-    transform: translateY(-4px);
-    cursor: pointer;
+@media (max-width: 900px) {
+  // mobile
+  button{
+    height: 50px;
+  }
+  .icon__button{
+    width: 40px;
+    height: 40px;
+  }
 }
+
+@media (min-width: 900px) {
+  // desktop
+  button{
+    height: 65px;
+  }
+  .icon__button{
+    width: 50px;
+    height: 50px;
+  }
 }

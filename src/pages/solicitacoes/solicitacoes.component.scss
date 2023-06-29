@@ -1,34 +1,26 @@
+// global
 .div__bemvindo{
   width: 100%;
   background-image: url("https://64.media.tumblr.com/tumblr_lok755Qofg1qkzotco1_500.gif");
   background-size: 100%;
   background-repeat: no-repeat;
   overflow: auto;
-  height: 600px;
   font-style: normal;
-  color: #fff;
-  font-size: 60px;
-  padding-top: 500px;
-  padding-left: 20px;
+  color: var(--branco-suave);
+  font-weight: bold;
 }
 
 .section__class{
-  background-color: #1c1c73;
+  background-color: var(--azul-forte);
 }
 
 .btn-primary{
-  background-color: #5d67fa;
+  background-color: var(--azul-bebe);
   border: none;
-  width: 200px;
-  margin-top: 20px;
 }
 
-
-.btn-primary:hover{
-  background-color: #fff;
-  border: none;
-  width: 200px;
-  color: #000;
+h5{
+  color: var(--branco-suave);
 }
 
 .pedido__div{
@@ -39,7 +31,7 @@
   padding-top: 20px;
 
   h2{
-    color: #fff;
+    color: var(--branco-suave);
   }
 }
 
@@ -47,21 +39,63 @@
   margin-left: 50px;
   padding-top: 50px;
   margin-right: 50px;
-  box-shadow: 0px 5px 5px -5px black;
+  box-shadow: 0px 5px 5px -5px var(--preto-suave);
+}
+
+// hover
+.btn-primary:hover{
+  background-color: var(--branco-suave);
+  border: none;
+  width: 200px;
+  color: var(--preto-suave);
 }
 
 // dark
 .section__class-dark{
-  background-color: #0C0C0C;
+  background-color: var(--preto-forte);
 }
 
 .btn-primary-dark{
-  background-color: #fff;
+  background-color: var(--branco-suave);
   border: none;
-  color: #000;
+  color: var(--preto-suave);
   width: 200px;
   margin-top: 20px;
 }
 
+
+@media (max-width: 900px) {
+  // mobile
+  .div__bemvindo{
+    height: 150px;
+    font-size: 20px;
+    padding-top: 80px;
+    padding-left: 10px;
+  }
+  h5{
+    font-size: 18px;
+    text-align: left;
+    padding-left: 10px;
+  }
+  .btn-primary{
+    width: 150px;
+    margin-top: 20px;
+  }
+
+}
+
+@media (min-width: 900px) {
+  // desktop
+  .div__bemvindo{
+    height: 600px;
+    font-size: 60px;
+    padding-top: 500px;
+    padding-left: 20px;
+  }
+  .btn-primary{
+    width: 200px;
+    margin-top: 20px;
+  }
+}
 
 

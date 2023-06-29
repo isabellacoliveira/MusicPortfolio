@@ -3,7 +3,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'app-themeSwitcher',
   templateUrl: './themeSwitcher.component.html',
-  styleUrls: ['./themeSwitcher.component.css']
+  styleUrls: ['./themeSwitcher.component.scss']
 })
 export class ThemeSwitcherComponent implements OnInit {
   @Output() darkModeActiveChange: EventEmitter<boolean> = new EventEmitter<boolean>();

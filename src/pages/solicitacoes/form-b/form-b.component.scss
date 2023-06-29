@@ -1,0 +1,46 @@
+// global
+.div__contain__form{
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  background-color: var(--azul-suave);
+  color: var(--branco-suave);
+  align-items: center;
+  text-align: center;
+  padding-top: 220px;
+  height: 618px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px!important;
+}
+
+.checked__icon{
+  width: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+// dark
+.div__contain__form-dark{
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  background-color: var(--cinza-morno);
+  color: var(--branco-suave);
+  align-items: center;
+  text-align: center;
+  padding-top: 220px;
+  height: 618px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (max-width: 900px) {
+  // mobile
+
+}
+
+@media (min-width: 900px) {
+  // desktop
+
+}
+

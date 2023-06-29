@@ -1,3 +1,4 @@
+// global
 .div__historia{
   display: flex;
   flex-direction: column;
@@ -18,12 +19,8 @@
   padding-top: 10px;
 }
 
-.container-dark{
-  padding-top: 10px;
-}
-
 .color{
-  color: #fff;
+  color: var(--branco-suave);
 }
 
 .card-body {
@@ -35,11 +32,7 @@
 }
 
 .pagina{
-  background-color: #1c1c73;
-}
-
-.pagina-dark{
-  background-color: #0C0C0C;
+  background-color: var(--azul-forte);
 }
 
 .container{
@@ -62,31 +55,25 @@
   background-image: url("https://i.gifer.com/40RI.gif");
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 500px;
-  margin-bottom: 10px;
-  padding-top: 400px;
-  padding-left: 10px;
+
   h3{
     font-size: 60px;
   }
 }
 .button-style{
-  background-color: #5959b5;
-  color: #fff;
+  background-color: var(--azul-suave);
+  color: var(--branco-suave);
 }
-.button-style-dark{
-  background-color: #7b7579;
-  color: #fff;
-}
+
 
 .accordion-body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #5959b5;
-  color: #fff;
+  background-color: var(--azul-suave);
+  color: var(--branco-suave);
   padding-left: 10px;
-  
+
   img{
     margin-top: 30px;
     width: 500px;
@@ -95,12 +82,13 @@
     height: 500px;
   }
 }
+// dark
 .accordion-body-dark{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:#6c757d;
-  color: #fff;
+  background-color: var(--cinza-suave);
+  color: var(--branco-suave);
   padding-left: 10px;
 
   img{
@@ -112,5 +100,47 @@
   }
 }
 
+.button-style-dark{
+  background-color: var(--cinza-morno);
+  color: var(--branco-suave);
+}
+
+.container-dark{
+  padding-top: 10px;
+}
+
+.pagina-dark{
+  background-color: var(--preto-forte);
+}
+
+@media (max-width: 900px) {
+  // mobile
+  strong{
+    font-size: 10px;
+    padding-right: 2px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+  }
+  .cabecalho{
+    height: 200px;
+    padding-left: 10px;
+  }
+  .color{
+    padding-bottom: 10px;
+  }
+}
+
+@media (min-width: 900px) {
+  // desktop
+  strong{
+    padding: 3px 3px 3px 3px;
+  }
+  .cabecalho{
+    height: 500px;
+    margin-bottom: 10px;
+    padding-top: 400px;
+    padding-left: 10px;
+  }
+}
 
 
