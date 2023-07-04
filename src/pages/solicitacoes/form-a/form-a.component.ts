@@ -62,7 +62,7 @@ export class FormAComponent  {
             Olá Isabella! Gostaria da música ${this.formGroup.get('nomeDaMusica')?.value},
             do artista ${this.formGroup.get('artista')?.value}.
             Tocado no ${this.formGroup.get('instrumento')?.value}.
-            ${this.naoQueroMeIdentificar ?
+            ${!this.naoQueroMeIdentificar ?
             `Meu nome é: ${this.formGroup.get('nome')?.value}.
             Meu perfil do Instagram: ${this.formGroup.get('perfilInstagram')?.value}` : ""}`};
 

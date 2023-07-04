@@ -20,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ToastrModule } from 'ngx-toastr';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { SplashScreenComponent } from 'src/pages/splashScreen/splashScreen.component';
 
 export function playerFactory() {
   return player;
@@ -36,7 +37,8 @@ export function playerFactory() {
     FormBComponent,
     BotaoVoltarComponent,
     ThemeSwitcherComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SplashScreenComponent
   ],
   imports: [
     BrowserModule,

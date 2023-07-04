@@ -1,3 +1,4 @@
+import { SplashScreenComponent } from './../pages/splashScreen/splashScreen.component';
 import { FormBComponent } from './../pages/solicitacoes/form-b/form-b.component';
 import { FormAComponent } from './../pages/solicitacoes/form-a/form-a.component';
 import { SolicitacoesComponent } from './../pages/solicitacoes/solicitacoes.component';
@@ -11,13 +12,9 @@ import { NotFoundComponent } from 'src/pages/NotFound/NotFound.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'solicitacoes',
+    component: SplashScreenComponent,
     pathMatch: 'full'
   },
-  {
-    path: '',
-    component: HeaderComponent,
-    children: [
       {
         path: 'solicitacoes',
         component: SolicitacoesComponent,
@@ -36,8 +33,6 @@ const routes: Routes = [
         path: 'historia',
         component: HistoriaComponent
       },
-    ]
-  },
   {
     path: '**',
     component: NotFoundComponent

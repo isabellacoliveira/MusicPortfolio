@@ -1,0 +1,38 @@
+.img-fluid{
+  width: 150px;
+  padding-bottom: 20px;
+}
+
+.d-flex{
+  background-color: var(--preto-escuro);
+}
+
+/* splashScreen.component.css ou splashScreen.component.scss */
+.image-balancing {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.image-balancing:hover {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.custom-progress {
+  width: 300px; /* Defina o tamanho desejado para a barra de progresso */
+}
+
+
+
+
