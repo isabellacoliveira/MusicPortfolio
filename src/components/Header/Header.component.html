@@ -24,12 +24,24 @@ tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <br>
       Desenvolvido por Isabella Oliveira.
       <br>
+      <br>
+      O intuito desse aplicativo é facilitar o envio de sugestões de músicas pra tocar :)
+      O formulário é preenchido e as informações são enviadas para o meu email.
       <hr>
+      <div class="mt-4">
+        <form [formGroup]="formGroup" (submit)="enviarFormulario($event)">
+          <div class="form-group" >
+            <label for="suggestionsInput" class="label__input">Sugestões de melhorias para o app</label>
+            <textarea type="text" class="form-control" formControlName="sugestao" id="suggestionsInput" placeholder="Escreva aqui"></textarea>
+          </div>
+          <button [disabled]="formGroup.invalid" type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
 
-      <a href="https://www.instagram.com/isaxx_ah/">
-        Me siga no Instagram
-        <img class="log" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="">
-      </a>
+            <a href="https://www.instagram.com/isaxx_ah/">
+              Me siga no Instagram
+              <img class="log" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="">
+            </a>
     </div>
   </div>
 </div>

@@ -33,6 +33,10 @@
   }
 }
 
+.label__input{
+  padding-bottom: 10px;
+}
+
 .btn-close {
   background-color: var(--azul-bebe)!important;
 }
@@ -61,6 +65,11 @@
   a{
     color: var(--branco-suave);;
   }
+}
+
+.btn-primary{
+  margin-left: 0px;
+  width: 100%;
 }
 
 // dark mode
