@@ -4,11 +4,19 @@
       Seja bem-vindo(a) ao meu portifolio musical!
     </div>
     <div class="pedido__div">
-      <h5 class="paragrafo">Aqui você pode acompanhar um pouco da minha trajetória no mundo da música! <br>
-        Me envie um pedido! :) <br>
-      </h5>
+      <div>
+        <img src="../../assets/2022.jpeg" alt="Foto minha" >
+        <p class="paragrafo">Me chamo Isabella, tenho 19 anos, e sou apaixonada por música. Aqui você pode me enviar pedidos/solicitações <br>
+                              de músicas (para eu tocar) de sua preferência (e selecionar o instrumento de sua preferência), os pedidos <br>
+                              chegam para mim via e-mail. Você pode acompanhar o status de seu pedido por meio da playlist no Youtube. Os <br>
+                              pedidos são postados <a href="https://www.instagram.com/aqueladascordas/">aqui</a> em meu Instagram, em formato de vídeo/reels, no feed. Obrigada! Me envie um pedido! :)
+        </p>
+      </div>
       <button class="btn btn-primary" [ngClass]="stateDarkMode ? 'btn-primary' : 'btn-primary-dark'" (click)="solicitarMusica()">
         {{ !formularioAberto ? 'Solicitar Música ' : 'Ocultar Formulário'}}
+      </button>
+      <button class="btn btn-primary" [ngClass]="stateDarkMode ? 'btn-primary' : 'btn-primary-dark'">
+        <a href="https://www.youtube.com/playlist?list=PL7gWX6CbJymVqZM1-2kv05QP7S6tntzmr">Status do meu pedido</a>
       </button>
     </div>
     <div class="div__contain__form">
