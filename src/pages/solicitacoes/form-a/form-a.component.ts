@@ -6,6 +6,7 @@ import emailjs from 'emailjs-com';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { DarkModeService } from 'src/services/DarkMode/DarkMode.service';
+import { ChatGptService } from 'src/services/ChatGPT/chat-gpt.service';
 
 @Component({
   selector: 'app-form-a',
@@ -25,7 +26,7 @@ export class FormAComponent  {
   enviandoFormulario: boolean = false;
   stateDarkMode: boolean = false;
 
-  constructor(private router: Router, private formBuilder: FormBuilder, private spinner: NgxSpinnerService, private darkModeService: DarkModeService, private toastr: ToastrService) {
+  constructor(private chatGptService: ChatGptService, private router: Router, private formBuilder: FormBuilder, private spinner: NgxSpinnerService, private darkModeService: DarkModeService, private toastr: ToastrService) {
 
     this.formGroup = this.formBuilder.group({
       nomeDaMusica: ['', Validators.required],
@@ -77,6 +78,17 @@ export class FormAComponent  {
       this.toastr.success('E-mail enviado com sucesso!', 'Sucesso!');
       this.spinner.hide();
       this.router.navigate(['/solicitacoes/b']);
+
+      const nomeDaMusica = this.formGroup.get('nomeDaMusica')?.value;
+      this.chatGptService.chamarChatGPT(nomeDaMusica).subscribe(
+        (chatGPTResponse) => {
+          // Faça algo com a resposta do ChatGPT, como exibir ao usuário
+          console.log('Resposta do ChatGPT:', chatGPTResponse);
+        },
+        (error) => {
+          console.error('Erro ao chamar o ChatGPT:', error);
+        }
+      );
     })
     .catch((error) => {
       this.spinner.hide();
@@ -84,3 +96,5 @@ export class FormAComponent  {
     });
   }
 }
+
+
