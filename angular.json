@@ -36,7 +36,8 @@
               "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/lottie-web/build/player/lottie.js"
             ]
           },
           "configurations": {
@@ -81,7 +82,9 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "music-nation:build"
+            "browserTarget": "music-nation:build",
+            "vendorSourceMap": true,
+            "ssl": true
           }
         },
         "test": {
