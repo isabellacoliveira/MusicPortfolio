@@ -1,15 +1,41 @@
-<nav [ngClass]="stateDarkMode ? 'nav__div' : 'nav__div-dark'">
-  <a [ngClass]="stateDarkMode ? 'btn btn-primary' : 'btn btn-primary-dark'" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-    Sobre
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img class="img-sty" src="https://th.bing.com/th/id/R.5b279f31c2ce0b55897c4a5d6e5aea88?rik=JAPURgnLOQ35cA&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f2016%2f06%2fViolin-PNG-File.png&ehk=RnQNfwp%2fM9GmLiV8x8pEEN%2bGCSiGmBFTXMHhTBzS4ns%3d&risl=&pid=ImgRaw&r=0" alt="">
   </a>
-  <a href="https://www.instagram.com/isaxx_ah/" target="_blank">
-    <img src="https://i.pinimg.com/originals/43/88/40/438840ca10593324de82e90e29218f2d.jpg" alt="">
-  </a>
-  <div class="theme__div">
-    <app-themeSwitcher (darkModeActiveChange)="onDarkModeActiveChange($event)"></app-themeSwitcher>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pedidos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Parcerias</a>
+      </li>
+      <li class="nav-item">
+        <button type="button" class="btn btn-dark">
+          Tema
+          <app-themeSwitcher (darkModeActiveChange)="onDarkModeActiveChange($event)"></app-themeSwitcher>
+        </button>
+      </li>
+      <!-- serviço futuro de pix -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#">Colaborações</a>
+      </li> -->
+      <li class="nav-item">
+        <a [ngClass]="stateDarkMode ? 'btn btn-primary' : 'btn btn-primary-dark'" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+          Sobre
+        </a>
+      </li>
+    </ul>
   </div>
 </nav>
 
+<!-- passar isso para outro componente -->
 <div class="offcanvas offcanvas-start"
 [ngClass]="stateDarkMode ? 'offcanvas' : 'offcanvas-dark'"
 tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -37,7 +63,6 @@ tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
           <button [disabled]="formGroup.invalid" type="submit" class="btn btn-primary">Enviar</button>
         </form>
       </div>
-
             <a href="https://www.instagram.com/isaxx_ah/">
               Me siga no Instagram
               <img class="log" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="">

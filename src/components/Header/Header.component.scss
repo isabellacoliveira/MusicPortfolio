@@ -26,6 +26,11 @@
   }
 }
 
+.img-sty{
+  width: 60px;
+  margin-left: 15px;
+}
+
 .actions__div{
   width: 100%;
   li{
@@ -50,12 +55,9 @@
 }
 
 .btn-primary{
-  margin-bottom: 18px;
   background-color: var(--azul-bebe);
   border: none;
-  padding-top: 5px;
   margin-left: 20px;
-  height: 35px;
 }
 
 .offcanvas{
@@ -101,12 +103,9 @@
 }
 
 .btn-primary-dark{
-  margin-bottom: 18px;
   background-color: var(--branco-suave);;
   border: none;
-  padding-top: 5px;
   margin-left: 20px;
-  margin-top: 20px;
 }
 
 
