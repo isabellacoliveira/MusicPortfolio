@@ -21,6 +21,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { SplashScreenComponent } from 'src/pages/splashScreen/splashScreen.component';
+import { TypingAnimationComponent } from '../components/typing-animation/typing-animation.component';
 
 export function playerFactory() {
   return player;
@@ -38,7 +39,8 @@ export function playerFactory() {
     BotaoVoltarComponent,
     ThemeSwitcherComponent,
     NotFoundComponent,
-    SplashScreenComponent
+    SplashScreenComponent,
+    TypingAnimationComponent
   ],
   imports: [
     BrowserModule,

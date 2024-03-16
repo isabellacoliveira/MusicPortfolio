@@ -1,3 +1,43 @@
+.title_principal{
+  font-size: clamp(20px, 8vw, 70px);
+  line-height: clamp(48px, 9vw, 80px);
+  padding-bottom: 2rem;
+  text-wrap: nowrap;
+  letter-spacing: -2.94px;
+  background-color: var(--branco-suave);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 2rem;
+
+  img{
+    width: 400px;
+    height: 500px;
+    margin-left: 40px;
+  }
+}
+
+.text_p{
+  margin-top: 7rem;
+}
+
+.title_italic{
+  font-style: italic;
+}
+
+@keyframes subirDescer {
+  0%, 100% {
+    transform: translateY(0); /* A posição inicial e final é a mesma */
+  }
+  50% {
+    transform: translateY(-20px); /* Eleva a div 20 pixels no meio da animação */
+  }
+}
+
+.subir-descer-animacao {
+  animation: subirDescer 2s ease-in-out infinite; /* Aplica a animação */
+}
+
 // global
 .div__bemvindo{
   width: 100%;
